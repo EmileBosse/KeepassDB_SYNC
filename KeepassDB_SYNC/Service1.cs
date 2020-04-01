@@ -32,7 +32,8 @@ namespace KeepassDB_SYNC
         private void TimerCheck_Tick(object sender, EventArgs e)
         {
             Logger.Write(Type.DEBUG, "*** timer tick ***");
-            Analizer.Checkup();
+            if (Analizer.Checkup())
+                Logger.Write(Type.INFO, "Le fichier de base de donnée vient d'être mit à jour.");
         }
     }
 }
