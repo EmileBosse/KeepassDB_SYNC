@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KeepassDB_SYNC.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BakupFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">U:\keypassData\backup</Value>
+    </Setting>
+    <Setting Name="OnServerDBLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">U:\</Value>
+    </Setting>
+    <Setting Name="OnLocalDBLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\WorkApps\2_RdmInfoFolder</Value>
+    </Setting>
+    <Setting Name="Db_filename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Database.kdbx</Value>
+    </Setting>
+    <Setting Name="DEBUG" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="logFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\WorkApps\2_RdmInfoFolder\LOG</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
