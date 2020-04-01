@@ -35,6 +35,7 @@
             // 
             this.timerCheck.Enabled = true;
             this.timerCheck.Interval = 300000;
+            this.timerCheck.Tick += new System.EventHandler(this.TimerCheck_Tick);
             // 
             // Service1
             // 

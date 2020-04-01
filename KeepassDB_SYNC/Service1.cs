@@ -20,13 +20,19 @@ namespace KeepassDB_SYNC
         protected override void OnStart(string[] args)
         {
             Logger.Write(Type.INFO, "KeepassDB_SYNC service is starting.");
-            timerCheck.Interval = TimeSpan.FromMinutes(1).TotalMilliseconds();
+            timerCheck.Interval = (int)TimeSpan.FromMinutes(1).TotalMilliseconds;
             timerCheck.Start();
         }
 
         protected override void OnStop()
         {
             Logger.Write(Type.INFO, "KeepassDB_SYNC service stopped.");
+        }
+
+        private void TimerCheck_Tick(object sender, EventArgs e)
+        {
+            Logger.Write(Type.DEBUG, "*** timer tick ***");
+            Analizer.Checkup();
         }
     }
 }

@@ -13,18 +13,21 @@ namespace KeepassDB_SYNC
     {
         static public void Write(Type t, String m)
         {
-            try
+            if(t != Type.DEBUG || Properties.Settings.Default.DEBUG)
             {
-                String fileName = GetFileName(t);
-                String message = GetMessage(m);
-
-                using (System.IO.StreamWriter file =
-                    new System.IO.StreamWriter(Properties.Settings.Default.logFolder+"\\"+fileName, true))
+                try
                 {
-                    file.WriteLine(message);
+                    String fileName = GetFileName(t);
+                    String message = GetMessage(m);
+
+                    using (System.IO.StreamWriter file =
+                        new System.IO.StreamWriter(Properties.Settings.Default.logFolder + "\\" + fileName, true))
+                    {
+                        file.WriteLine(message);
+                    }
                 }
+                catch (Exception) { }
             }
-            catch (Exception){}
         }
 
         static String GetMessage(String m)
